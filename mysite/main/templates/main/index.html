@@ -1,0 +1,27 @@
+{%load static %}
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오름 올래?</title>
+    <link rel="stylesheet" href="{% static 'css/index.css' %}" />
+</head>
+<body>
+        <article class="oreum-start flex-row">
+            <div class="flex-col oreum-start__box">
+                <p class="oreum-start__title">
+                    <strong>오름 올래?</strong> 서비스를 이용하기 위해서는 <br/>닉네임을 입력해주세요!
+                </p>
+                <input class="oreum-start__nickname" type="text" name="nickname" placeholder="닉네임을 입력해주세요."/>
+                <button type="button" class="oreum-start__learn-button">오름 알아보기</button>
+            </div>
+        </article>
+
+        {% block js %}
+        <script src="{% static 'js/startPage.js' %}" type="module"></script>
+        {% endblock js %}
+</body>
+</html>
